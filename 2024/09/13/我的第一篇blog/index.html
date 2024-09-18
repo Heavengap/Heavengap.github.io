@@ -1630,17 +1630,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1726332422166),
+    lastupdate: new Date(1726623873513),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate","music"],
-      for_post: ["toc"],
+      for_page: ["blogger","category","tagcloud","donate"],
+      for_post: ["toc","qrcode","type","webinfo"],
       webinfo: {
         lastupd: {
           enable: true,
           friendlyShow: true
         },
         runtime: {
-          data: "2020/01/01",
+          data: "2024/09/08",
           unit: "天"
         }
       }
@@ -2596,6 +2596,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZklEQVR42u3aQXLjMAwEQP//09kHbLmMAUAqTjVv3pVkquEDgczrxzqyXgjAgrXAggVrgb0C+2qu/x745v/fff50ffV73l337r53n7c8wIIFCxYsWLBgwd6FLR+AwxepglcBpkBd8HLBwIIFCxYsWLBgwT4Cm4KkG6neV20AthqStfvBggULFixYsGDBfjVsdZC9feDvNjJgwYIFCxYsWLBgwU6CEtMCTRsPsGDBggULFixYsN8JOz1QVw/23RdLn396cA8WLFiwYMGCBQv2WdhTG/vWz20PsGDBggULFixYsFdgp2t6oK5enw7Iu7BjD7BgwYIFCxYsWLBXYLsH5OlgPP337WDFqfcHCxYsWLBgwYIFewf2VLCiexCvwqeF3h7klwfdYMGCBQsWLFiwYK/CdgfD1YJ0D/Lpi9/6QYAFCxYsWLBgwYJ9BjYNOlSDE2sbbg7GpwWOfwBgwYIFCxYsWLBgr8BOAdNB88+hlTYu3cKOkzBgwYIFCxYsWLBgj8CmD/q08XEAYmlw3f0BxEEWsGDBggULFixYsFdg08F0N6A8DfxOB+5bzy03CGDBggULFixYsGCPwp4Gax+0hw3H9HN7IA4WLFiwYMGCBQv2Cuz2AHurwdhqELYKVB68gwULFixYsGDBgr0K2/2ibkG6a+0gHzYm5T8IgAULFixYsGDBgr0CuzWorm5k+qJbjcx2gwQWLFiwYMGCBQv2LuzWi00LsF24buMwHqyDBQsWLFiwYMGCvQK7FbA4vuFhYavvmz6/3HmBBQsWLFiwYMGCPQLbHuwWgx5pQGK6r26huvsBCxYsWLBgwYIF+wzsdICcXrcV9Dg96I73ARYsWLBgwYIFC/ZXwW43CNVB91ZgZApZbjDAggULFixYsGDBPgq71TCkjcDpoMY0MPLxe8CCBQsWLFiwYMH+CtjqQbs7qO4WcBoo6QY4xoENsGDBggULFixYsCuw6YE7DUZMgbYG3vHAujkoBwsWLFiwYMGCBXsXNh0UTwfE6YtNB+bd9x03CGDBggULFixYsGCPwJ46qMcbGq5p0GJrQA4WLFiwYMGCBQv2Luw0aHEqAJE2KNuNR9zYgAULFixYsGDBgn0EdjqY7hZiO1Cx1UDEQRGwYMGCBQsWLFiwj8JOAdIX6wZBuuBgwYIFCxYsWLBg/ybs1sF8el163+lACFiwYMGCBQsWLNjfATtd241BtzDdYEZ1QF9uOMCCBQsWLFiwYMFegd0+ME+DG9vBj24jkV4HFixYsGDBggUL9hnY7YYgPbCnhZo2Bmkhx4ENsGDBggULFixYsEdh0410AxPdAqQNQjcAkg64wYIFCxYsWLBgwX4nbPqc6QD8NVztQfan9wALFixYsGDBggX7lbDbQYj0wJ4WdOt+sGDBggULFixYsM/CpoGN0wGN9sA5bFy2GgWwYMGCBQsWLFiwd2G3BsXTBiFd3WBJt6DxoBssWLBgwYIFCxbsEVhrd4EFC9YCCxasBfbo+gfDtRlNq/tBlwAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
     
       
     
@@ -2664,6 +2672,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   
 
+  
+    
+    
+      
+<section class="widget qrcode desktop mobile pjax">
+  
+
+  <div class='content article-entry'>
+    
+      <img src='https://d1.aag.moe/public/2024/09/18/8aa682f337f1cb5c7f0356288aebc1b2.jpg'
+      
+        height='64px'
+      />
+    
+      <img src='https://d1.aag.moe/public/2024/09/18/f7fb861cdadb89a82bfe07d2807bc3d0.jpg'
+      
+        height='64px'
+      />
+    
+  </div>
+</section>
+
+    
+  
+
+  
+
+  
+    
+    
+      
+<section class="widget desktop pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>3 篇</div>
+        </div>
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          <div id="last-update-show">2024-09-18 日</div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+    
+  
+
 
 <div class="widget-sticky pjax">
 
@@ -2691,14 +2770,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2803,7 +2874,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="mailto:1328473008@qq.com"
+              <a href="mailto:mamaolin2004@163.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2845,7 +2916,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2021 XXX</a></p>
+        <p><a href="/">Copyright © 2024-2025 林</a></p>
 
         </div>
       

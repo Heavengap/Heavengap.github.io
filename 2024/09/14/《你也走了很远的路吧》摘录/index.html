@@ -1629,17 +1629,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1726332422166),
+    lastupdate: new Date(1726623873513),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate","music"],
-      for_post: ["toc"],
+      for_page: ["blogger","category","tagcloud","donate"],
+      for_post: ["toc","qrcode","type","webinfo"],
       webinfo: {
         lastupd: {
           enable: true,
           friendlyShow: true
         },
         runtime: {
-          data: "2020/01/01",
+          data: "2024/09/08",
           unit: "天"
         }
       }
@@ -2599,6 +2599,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
+        </div>
+      
     
       
     
@@ -2667,6 +2675,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
   
 
+  
+    
+    
+      
+<section class="widget qrcode desktop mobile pjax">
+  
+
+  <div class='content article-entry'>
+    
+      <img src='https://d1.aag.moe/public/2024/09/18/8aa682f337f1cb5c7f0356288aebc1b2.jpg'
+      
+        height='64px'
+      />
+    
+      <img src='https://d1.aag.moe/public/2024/09/18/f7fb861cdadb89a82bfe07d2807bc3d0.jpg'
+      
+        height='64px'
+      />
+    
+  </div>
+</section>
+
+    
+  
+
+  
+
+  
+    
+    
+      
+<section class="widget desktop pjax">
+  
+  <header>
+    
+      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="webinfo">
+      
+        <div class="webinfo-item">
+          <div>文章数目：</div>
+          <div>3 篇</div>
+        </div>
+      
+
+      
+
+
+      
+
+      
+
+      
+
+      
+        <div class="webinfo-item">
+          <div>最后活动时间：</div>
+          <div id="last-update-show">2024-09-18 日</div>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+    
+  
+
 
 <div class="widget-sticky pjax">
 
@@ -2694,14 +2773,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2806,7 +2877,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="mailto:1328473008@qq.com"
+              <a href="mailto:mamaolin2004@163.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2848,7 +2919,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2021 XXX</a></p>
+        <p><a href="/">Copyright © 2024-2025 林</a></p>
 
         </div>
       
