@@ -118,8 +118,8 @@ html >::-webkit-scrollbar-track-piece {
 html >::-webkit-scrollbar-thumb {
   background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
   cursor: pointer;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
 }
 html >::-webkit-scrollbar-thumb:hover {
   background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1727099919998),
+    lastupdate: new Date(1727142508782),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","qrcode","type","webinfo"],
@@ -2193,7 +2193,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2700,7 +2700,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="half" class='cover-wrapper  search' style="display: ;">
         
   <div id="parallax-window"></div>
 
@@ -2716,7 +2716,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="搜索一下" />
+          <input type="text" class="input u-search-input" placeholder="你想搜索什么内容呀！" />
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
@@ -2792,7 +2792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://rmlin.cn/2024/09/14/《你也走了很远的路吧》摘录/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="林的家">
@@ -2878,11 +2878,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
+<section class="widget blur floatable shadow blogger  desktop mobile pjax">
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
+        <a class='avatar flat-box circle' href='/about/'>
           <img no-lazy src='https://pic.imgdb.cn/item/66f12996f21886ccc09c97db.jpg'/>
         </a>
       
@@ -2987,7 +2987,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/%E4%B8%AD%E7%A7%8B%E8%8A%82/" style="font-size: 14px; color: #999">中秋节</a> <a href="/tags/%E6%91%98%E5%BD%95/" style="font-size: 14px; color: #999">摘录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">日常</a> <a href="/tags/%E6%9E%97/" style="font-size: 24px; color: #555">林</a>
+      <a href="/tags/%E6%91%98%E5%BD%95/" style="font-size: 14px; color: #999">摘录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 24px; color: #555">日常</a> <a href="/tags/%E6%9E%97/" style="font-size: 24px; color: #555">林</a>
     </div>
   </section>
 
@@ -3046,14 +3046,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.add("show");
+    l_header.classList.remove("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="none";
-      cover_wrapper.style.display="none";
+      cover_wrapper.id="half";
+      cover_wrapper.style.display="";
       scroll_down.style.display="none";
     
   
@@ -3990,7 +3990,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg","https://pic.imgdb.cn/item/66f16bcff21886ccc0ddb4ce.png","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg"];
+  let imgs = ["https://pic.imgdb.cn/item/66f16bcff21886ccc0ddb4ce.png","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg","https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
