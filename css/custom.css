@@ -1,0 +1,4 @@
+/* custom.css */
+body {
+    cursor: url('path/to/cursor/image.png'), auto;
+}
