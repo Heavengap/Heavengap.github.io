@@ -110,6 +110,22 @@ html {
   font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
   font-size: 16px;
 }
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+}
 body {
   background-color: var(--color-site-body);
   text-rendering: optimizelegibility;
@@ -1744,7 +1760,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1728451928502),
+    lastupdate: new Date(1728456789282),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","qrcode","type","webinfo"],
@@ -2171,6 +2187,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- front-matter head_end begin -->
   <!-- front-matter head_end end -->
 </head>
+  <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
@@ -3874,7 +3891,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg","https://pic.imgdb.cn/item/66f2c9f5f21886ccc001c663.jpg","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg"];
+  let imgs = ["https://pic.imgdb.cn/item/66f2c9f5f21886ccc001c663.jpg","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg","https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4213,8 +4230,5 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     <!-- Custom Files bodyEnd end-->
     <!-- front-matter body_end begin -->
     <!-- front-matter body_end end -->
-     <!-- 页面点击小红心 -->
-    <script type="text/javascript" src="/js/love.js"></script>
   </body>
 </html>
-
