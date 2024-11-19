@@ -7655,6 +7655,18 @@ ul.list-v.rightmenu li.music .nav.volume .aplayer-volume-bar .aplayer-volume {
   content: "";
   background: linear-gradient(#fefefe, #fffbe8);
 }
+.cus-article-bkg {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -10;
+}
 @-moz-keyframes CuteenPlanetMove {
   0% {
     transform: rotate(0);
