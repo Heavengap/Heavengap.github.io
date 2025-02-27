@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-02-08T10:20:37.000Z">
-<meta property="article:modified_time" content="2025-02-23T13:38:07.234Z">
+<meta property="article:modified_time" content="2025-02-27T01:50:47.019Z">
 <meta property="article:author" content="林">
 <meta property="article:tag" content="python爬虫">
 <meta name="twitter:card" content="summary">
@@ -1761,7 +1761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1740317916678),
+    lastupdate: new Date(1740663335727),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc","qrcode","type","webinfo"],
@@ -2873,13 +2873,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>737 words</p>
+      <p>1.4k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -2903,7 +2903,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <img src="https://i-blog.csdnimg.cn/blog_migrate/9b43ff6bd1b7a014c59dea3bfcaefd54.png" class="lazyload" data-srcset="https://i-blog.csdnimg.cn/blog_migrate/9b43ff6bd1b7a014c59dea3bfcaefd54.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" align = "left"/>
 
 <h4 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h4><p>（文章所用代码等皆在GitHub中<a target="_blank" rel="noopener" href="https://github.com/Heavengap/pythonProject">Heavengap&#x2F;pythonProject: myselfPractice</a>）</p>
-<p>以百度网页为例（<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>)</p>
+<p>如果你的python版本为3以下 还需安装urllib   在终端（alt+F12）中输入**<code>pip install urllib</code>**</p>
+<p><img src="https://pic1.imgdb.cn/item/67bfbd3dd0e0a243d4066664.png" class="lazyload" data-srcset="https://pic1.imgdb.cn/item/67bfbd3dd0e0a243d4066664.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>出现.venv 则说明在建立python项目时建立的虚拟环境 此时的任何库的引入在其他项目中不生效只作用于本项目中，其他项目如需使用需重新引入。</p>
+<p>以百度网页为例（<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>) <strong>此处http协议而不是https!https涉及三次握手更麻烦</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line">url = <span class="string">&quot;http://www.baidu.com&quot;</span></span><br><span class="line">resp = urlopen(url)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;mybaidu.html&quot;</span>, mode=<span class="string">&quot;w&quot;</span>, encoding =<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(resp.read().decode(<span class="string">&quot;utf-8&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;over!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>用的python3自带的urllib库 用浏览器打开生产的mybaidu.html可看到爬到的网页网站 此类网址为整合网址，指网页数据与构建网页的框架为一体，即获取到代码中就包含网页信息</p>
@@ -2914,7 +2917,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>将with open 的整体操作as f ，f的write中读取resp并且编码模式为utf-8，不表明则为乱码，可自行实验</p>
 <p>最后在结束段输出over!表明程序完整运行并结束。</p>
-<h4 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h4>
+<h4 id="简易网页自搜索"><a href="#简易网页自搜索" class="headerlink" title="简易网页自搜索"></a>简易网页自搜索</h4><p>首先要引入库这个概念。默认的python编译器中缺少很多模块，例如c++ 中的库添加。此处用到的库为’requests’ 首次使用 </p>
+<p>打开文件终端（alt+F12） 输入 <strong>pip install requests</strong>即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">query = <span class="built_in">input</span>(<span class="string">&quot;请输入你想要搜索的内容：&quot;</span>)</span><br><span class="line">url = <span class="string">f&#x27;https://cn.bing.com/search?q=<span class="subst">&#123;query&#125;</span>&#x27;</span></span><br><span class="line">headers=&#123;</span><br><span class="line"><span class="string">&quot;user-agent&quot;</span>:<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0&quot;</span>&#125;</span><br><span class="line">resp=requests.get(url,headers=headers)</span><br><span class="line"><span class="built_in">print</span>(resp.text)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>根据 “小试牛刀”环节 你可以大题理解代码内容，其中 query 相当于变量X  在url中 起变量作用，你可以在浏览器中搜索任何内容，你会发现，他们大致的网页地址均为<a target="_blank" rel="noopener" href="https://www.bing.com/search?q=%E9%99%88%E5%A5%95%E8%BF%85">https://www.bing.com/search?q=陈奕迅</a> <strong>；</strong>  <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=%E9%99%88%E5%A5%95%E8%BF%85%E3%80%82%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%AF%B4%EF%BC%8C%E5%90%8E%E9%9D%A2%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%B2%E6%9D%82%E4%B9%B1%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%8C">https://www.baidu.com/s?wd=陈奕迅。你可能会说，后面还有一串杂乱的代码，</a></p>
+<img src="https://pic1.imgdb.cn/item/67bfbfeed0e0a243d40666b7.png" class="lazyload" data-srcset="https://pic1.imgdb.cn/item/67bfbfeed0e0a243d40666b7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alige ="left" style="zoom:80%;" />
+
+<p>删除后面冗杂的部分后你会发现搜索内容并不会改变 .W&lt;</p>
+<p><strong>headers</strong>为请求头部分，他的存在是必不可少的，你会发现在确实headers的现况下，一些网址会阻止你的访问，这就涉及到反爬方面的知识，而headers中的内容就像我们的居民身份证一样，没有它寸步难行。所以我们需要伪装一个，如果你仔细看headers的内容不难发现其中包括很多我们的个人信息，比如chrome的是133.0.0.0 edg浏览器为133.0.0.0 safari为537.36 window系统等等。那么如何简单获取我们的请求头呢？ 可以借助浏览器自带的工具<strong>“开发者工具”</strong>（Ctrl+Shift+i）</p>
+<p>在”网络“主分类中选择”全部“项，此时刷新页面，打开名称中第一个文件。</p>
+<p><img src="https://pic1.imgdb.cn/item/67bfc4a4d0e0a243d4066bac.png" class="lazyload" data-srcset="https://pic1.imgdb.cn/item/67bfc4a4d0e0a243d4066bac.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>你会找到 User-Agent 它的内容就是我们要找的内容。别忘了在前面添加**”user-agent”:**</p>
+<p>代码运行过程中 如果出现<strong>urllib3.exceptions.ProxyError: (‘Unable to connect to proxy’, OSError(0, ‘Error’))</strong> 请检查你的网络代理是不是没关</p>
+
   </div>
   
   
@@ -2938,10 +2954,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-23T21:38:07+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-02-27T09:50:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 23, 2025</p>
+    <p>更新于：Feb 27, 2025</p>
   </a>
 </div>
 
@@ -2961,13 +2977,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>737 words</p>
+      <p>1.4k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>2 min</p>
+      <p>5 min</p>
     </a>
   </div>
 
@@ -3139,7 +3155,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>14.1k 字</div>
+          <div>14.7k 字</div>
         </div>
       
 
@@ -3150,7 +3166,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-02-23 日</div>
+          <div id="last-update-show">2025-02-27 日</div>
         </div>
       
     </div>
@@ -3177,7 +3193,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E7%88%AC%E8%99%AB"><span class="toc-text">python爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E4%BB%8B%E7%BB%8D"><span class="toc-text">爬虫介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">爬虫准备工作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80"><span class="toc-text">小试牛刀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"><span class="toc-text">未完待续</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E7%88%AC%E8%99%AB"><span class="toc-text">python爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E4%BB%8B%E7%BB%8D"><span class="toc-text">爬虫介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">爬虫准备工作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80"><span class="toc-text">小试牛刀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E6%98%93%E7%BD%91%E9%A1%B5%E8%87%AA%E6%90%9C%E7%B4%A2"><span class="toc-text">简易网页自搜索</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4205,7 +4221,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://pic.imgdb.cn/item/66f2c9f5f21886ccc001c663.jpg","https://pic.imgdb.cn/item/673c35a6d29ded1a8c90d438.jpg","https://pic1.imgdb.cn/item/673c2e82d29ded1a8c820b7e.jpg","https://pic.imgdb.cn/item/67500f49d0e0a243d4dd20ba.jpg","https://pic.imgdb.cn/item/673c2e7bd29ded1a8c81fd14.jpg","https://pic1.imgdb.cn/item/67a73c8cd0e0a243d4fd128a.jpg","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg","https://pic.imgdb.cn/item/675c177fd0e0a243d4e3b094.png","https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg","https://pic.imgdb.cn/item/675c1540d0e0a243d4e3aff2.png"];
+  let imgs = ["https://pic1.imgdb.cn/item/67a73c8cd0e0a243d4fd128a.jpg","https://pic.imgdb.cn/item/66e3d079d9c307b7e96caef4.jpg","https://pic.imgdb.cn/item/66f1152df21886ccc089c715.jpg","https://pic1.imgdb.cn/item/673c2e82d29ded1a8c820b7e.jpg","https://pic.imgdb.cn/item/673c2e7bd29ded1a8c81fd14.jpg","https://pic.imgdb.cn/item/673c35a6d29ded1a8c90d438.jpg","https://pic.imgdb.cn/item/67500f49d0e0a243d4dd20ba.jpg","https://pic.imgdb.cn/item/66f2c9f5f21886ccc001c663.jpg","https://pic.imgdb.cn/item/675c1540d0e0a243d4e3aff2.png","https://pic.imgdb.cn/item/675c177fd0e0a243d4e3b094.png"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4451,7 +4467,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"林的家","url":"https://rmlin.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/","sameAs":["https://github.com/volantis-x"],"description":"社恐内向 胆小敏感"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://rmlin.cn/","name":"林的家"}},{"@type":"ListItem","position":2,"item":{"@id":"https://rmlin.cn/categories/计算机语言/","name":"计算机语言"}},{"@type":"ListItem","position":3,"item":{"@id":"https://rmlin.cn/2025/02/08/python爬虫基础（1）/","name":"python爬虫基础（1）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"林的家","url":"https://rmlin.cn/","keywords":null,"description":"社恐内向 胆小敏感","author":{"@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/","description":"社恐内向 胆小敏感"},"publisher":{"@type":"Organization","name":"林的家","url":"https://rmlin.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://rmlin.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python爬虫基础（1）","description":"社恐内向 胆小敏感","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://rmlin.cn/2025/02/08/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/"},"author":{"@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/"},"publisher":{"@type":"Organization","name":"林的家","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://rmlin.cn/2025/02/08/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/","wordCount":0,"datePublished":"2025-02-08T10:20:37.000Z","dateModified":"2025-02-23T13:38:07.234Z","articleSection":"计算机语言","keywords":"python爬虫","image":{"@type":"ImageObject","url":"https://pic1.imgdb.cn/item/66f62494f21886ccc0a0f5be.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"林的家","url":"https://rmlin.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/","sameAs":["https://github.com/volantis-x"],"description":"社恐内向 胆小敏感"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://rmlin.cn/","name":"林的家"}},{"@type":"ListItem","position":2,"item":{"@id":"https://rmlin.cn/categories/计算机语言/","name":"计算机语言"}},{"@type":"ListItem","position":3,"item":{"@id":"https://rmlin.cn/2025/02/08/python爬虫基础（1）/","name":"python爬虫基础（1）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"林的家","url":"https://rmlin.cn/","keywords":null,"description":"社恐内向 胆小敏感","author":{"@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/","description":"社恐内向 胆小敏感"},"publisher":{"@type":"Organization","name":"林的家","url":"https://rmlin.cn/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://rmlin.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python爬虫基础（1）","description":"社恐内向 胆小敏感","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://rmlin.cn/2025/02/08/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/"},"author":{"@type":"Person","name":"林","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://rmlin.cn/"},"publisher":{"@type":"Organization","name":"林的家","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://rmlin.cn/2025/02/08/python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/","wordCount":0,"datePublished":"2025-02-08T10:20:37.000Z","dateModified":"2025-02-27T01:50:47.019Z","articleSection":"计算机语言","keywords":"python爬虫","image":{"@type":"ImageObject","url":"https://pic1.imgdb.cn/item/66f62494f21886ccc0a0f5be.jpg","width":1024,"height":768}}]</script>
 
 
 
